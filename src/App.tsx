@@ -1,8 +1,11 @@
 import React from 'react'
-import './App.scss'
+import '@/App.css'
+import { useRoutes } from 'react-router-dom'
+import routeConfig from './router'
 
 function App() {
-  return <div className="App">Hello World!</div>
+  const element = useRoutes(routeConfig)
+  return <div className="App">{element}</div>
 }
 
 export default App
