@@ -17,7 +17,7 @@ export default function Home() {
           <Button className="login-button">手机号登录</Button>
         </div>
         <div className="temporary-login">
-          <Button onClick={() => navigate('/find')} className="temporary-button">
+          <Button onClick={() => navigate('/index/find')} className="temporary-button">
             立即体验
           </Button>
         </div>
