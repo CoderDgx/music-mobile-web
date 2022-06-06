@@ -1,8 +1,20 @@
 @import 'src/assets/style/px2rem.scss';
 .index-wraps {
+  .nav-bar {
+    position: relative;
+    z-index: 10;
+    background-color: #f9f9f9;
+
+    .search-bar {
+      --background: #fff;
+      --border-radius: 20px;
+      margin-left: 0;
+    }
+  }
   .tab-bar {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1;
   }
 }

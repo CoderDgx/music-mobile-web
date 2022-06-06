@@ -1,7 +1,8 @@
+/* eslint-disable default-case */
 import React, { useState } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 
-import { TabBar } from 'antd-mobile'
+import { TabBar, NavBar, SearchBar } from 'antd-mobile'
 import {
   FindActive,
   Find,
@@ -10,7 +11,8 @@ import {
   Yuncun,
   YuncunActive,
   Video,
-  VideoActive
+  VideoActive,
+  SliderList
 } from '@/assets/icons'
 
 import './index.scss'
@@ -40,6 +42,8 @@ export default function index() {
   ]
   const [activeKey, setActiveKey] = useState('find')
   const navigate = useNavigate()
+  const location = useLocation()
+  const pathName = location.pathname.split('/').slice(-1)[0]
 
   const TabBarOnChange = (key: string) => {
     setActiveKey(key)
@@ -47,6 +51,9 @@ export default function index() {
   }
   return (
     <div className="index-wraps">
+      <NavBar back={null} left={<SliderList />} className="nav-bar">
+        {pathName === 'find' ? <SearchBar className="search-bar" placeholder="请输入内容" /> : ''}
+      </NavBar>
       <Outlet />
       <TabBar className="tab-bar" activeKey={activeKey} onChange={TabBarOnChange}>
         {tabs.map((item) => (
