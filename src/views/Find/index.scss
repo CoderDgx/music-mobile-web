@@ -1,3 +1,17 @@
 @import 'src/assets/style/px2rem.scss';
 .find {
+  .swiper {
+    --width: 100%;
+  }
+
+  .tag {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.adm-page-indicator {
+  --dot-color: rgb(255, 255, 255, 0.5);
+  --active-dot-color: rgb(172, 6, 6);
 }
