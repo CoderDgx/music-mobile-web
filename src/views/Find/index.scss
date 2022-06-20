@@ -1,13 +1,68 @@
 @import 'src/assets/style/px2rem.scss';
 .find {
-  .swiper {
-    --width: 100%;
+  .top-content {
+    margin-top: px2rem(20);
+    display: flex;
+    justify-content: center;
+
+    .swiper {
+      --width: 95%;
+      --border-radius: 10px;
+    }
   }
 
   .tag {
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+
+  .find-tab-bar {
+    width: 100%;
+    height: px2rem(230);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 px2rem(40);
+    margin-top: px2rem(20);
+    border-bottom: px2rem(1) solid #ccc;
+
+    .fined-tab-list {
+      width: px2rem(130);
+      height: px2rem(150);
+
+      // background: #000;
+      .fined-icon-run {
+        width: px2rem(100);
+        height: px2rem(100);
+        margin: 0 auto;
+        background: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fined-icon {
+          font-size: px2rem(60);
+          text-align: center;
+          line-height: px2rem(100);
+          color: #fff;
+        }
+
+        .font-sizes {
+          text-align: center;
+          line-height: px2rem(100);
+          color: #fff;
+          font-size: px2rem(100);
+        }
+      }
+
+      .fined-icon-text {
+        font-size: px2rem(30);
+        padding-top: px2rem(20);
+        color: #000;
+        text-align: center;
+      }
+    }
   }
 }
 

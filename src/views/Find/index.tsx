@@ -5,11 +5,12 @@ import { getBanner } from '@/api/find'
 
 import './index.scss'
 import { Swiper, Image, Tag } from 'antd-mobile'
+import FindTabBar from './cpns/FindTabBar'
 
 export default function Find() {
   const { data: banners } = useRequest(getBanner)
 
-  const items = banners?.map((banner: any) => (
+  const BannerItems = banners?.map((banner: any) => (
     <Swiper.Item key={banner.bannerId}>
       <div>
         <Tag className="tag" color={banner.titleColor === 'blue' ? '#126bae' : '#ec9bad'}>
@@ -22,9 +23,12 @@ export default function Find() {
 
   return (
     <div className="find">
-      <Swiper autoplay loop className="swiper">
-        {items}
-      </Swiper>
+      <div className="top-content">
+        <Swiper autoplay loop className="swiper">
+          {BannerItems}
+        </Swiper>
+      </div>
+      <FindTabBar />
     </div>
   )
 }
