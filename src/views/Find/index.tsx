@@ -29,6 +29,7 @@ export default function Find() {
         </Swiper>
       </div>
       <FindTabBar />
+      <div>sss</div>
     </div>
   )
 }
